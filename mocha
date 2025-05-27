@@ -1,0 +1,34 @@
+sab files test folder k under banega
+sum.js
+function sum(a.b){
+return a + b;
+}
+module.exports = sum;
+
+sum.test.js
+const assert = require('assert');
+const sum = require('./sum');
+describe('Sum Function',() => {
+it('Should return 3 for 1+2',() => {
+assert.strictEqual(sum(1,2),3);
+});
+});
+
+profit.js
+function profit(cp,sp){
+    profit = sp-cp;
+    return profit
+}
+module.exports= profit
+
+profit.test.js
+describe('Profit Calculation Logic', () => {
+  it('should correctly calculate profit', () => {
+    const cp = 100;
+    const sp = 150;
+    const profit = sp - cp;
+
+    expect(profit).to.equal(50);
+  });
+});
+
