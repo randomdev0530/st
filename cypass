@@ -1,0 +1,27 @@
+hello.cy.js
+describe('Hello world', () => {
+  it('passes', () => {
+    cy.visit('https://example.cypress.io');
+    cy.title().should('include', 'Cypress');
+  });
+});
+
+visibility.cy.js
+describe('visibility', () => {
+  it('check if button is visible', () => {
+    cy.visit('https://example.cypress.io');
+    cy.contains('type').should('be.visible')
+  });
+});
+
+factorial.cy.js
+describe('factorial function',()=>{
+    it('factorial of 4 is 24',()=>{
+        const n = 4;
+        function factorial(n){
+            if(n==0) return 1;
+            return n*factorial(n-1)
+        }
+        expect(factorial(4)).to.equal(28)
+    })
+})
