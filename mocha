@@ -22,13 +22,10 @@ function profit(cp,sp){
 module.exports= profit
 
 profit.test.js
-describe('Profit Calculation Logic', () => {
-  it('should correctly calculate profit', () => {
-    const cp = 100;
-    const sp = 150;
-    const profit = sp - cp;
-
-    expect(profit).to.equal(50);
-  });
-});
-
+const assert = require('assert')
+const profit = require('./profit')
+describe('Profit function',()=>{
+    it('profit should be 50',()=>{
+        assert.strictEqual(profit(100,150),50)
+    })
+})
